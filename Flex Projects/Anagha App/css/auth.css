@@ -1,0 +1,26 @@
+.containerAuth {
+    height: 100vh;
+    background: url(../images/bgPencil.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wrapperAuth {
+    width: 50%;
+    margin: 4rem;
+    justify-items: flex-start;
+}
+
+.wrapperAuth form {
+    width: 90%;
+    height: 90%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4rem 5rem;
+    align-items: flex-start;
+}
+

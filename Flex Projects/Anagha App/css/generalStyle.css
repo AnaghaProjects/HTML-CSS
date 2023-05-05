@@ -1,0 +1,153 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --font-color : #50327e;
+    --secondary-color: #ffcdb7;
+    --button-color : #ad1309;
+    --link-color: #32261f;
+    --border-color: #e8e0dc;
+    --placeholder-color: #e8e0dc;
+    --min-background-color : #f1a75a;
+    --max-background-color : #dc7a29;
+    --h1-font-color : #8b3218;
+    --std-row-height: 4rem;
+    --std-row-button-height: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    font-size: 1rem;
+}
+
+/* General CSS  */
+.row {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    color: var(--font-color);
+    height: var(--std-row-height);
+    margin-top: 2rem;
+    width: 100%;
+    /* border: 2px solid brown; */
+    /* box-shadow: 0px rgba(0,0,0,0.2); */
+}
+
+.row .form-group {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.form-group-min-width {
+    height: 80% !important;
+}
+
+.form-group-right-link {
+    display: flex;
+    justify-content: end;
+}
+
+.row .form-group input {
+    width: 100%;
+    height: 100%;
+    padding: 0.3rem;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    color: var(--font-color);
+    transition: 0.5s;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.row .form-group input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.row .form-group span {
+    position: absolute;
+    left: 0;
+    padding: 0.4rem 0.9rem;
+    pointer-events: none;
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+.row .form-group input:valid ~ span,
+.row .form-group input:focus ~ span {
+    color: var(--placeholder-color);
+    transform: translateX(17px) translateY(-13px);
+    font-size: 1.2em;
+    padding: 0 10px;
+    background: var(--font-color);
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+}
+
+.row .form-group input[type="checkbox"] ~ span {
+    font-size: 1rem;
+    color: var(--main-color);
+    background: transparent;
+    border: none;
+    letter-spacing: normal;
+    margin: 0.2rem;
+    margin-top: 0.6rem;
+    font-weight: 500;
+    width:max-content;
+}
+
+.row .form-group input[type="checkbox"]:checked {
+    color: var(--font-color);
+    background-color: var(--font-color) !important;
+}
+
+.row .form-group button {
+    /* margin-top: -10rem; */
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: var(--button-color);
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--h1-font-color);
+    letter-spacing: 0.2rem;
+    text-decoration: underline;
+}
+
+a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--link-color);
+    font-style: italic;
+    /* color: var(--font-color); */
+    cursor: pointer;
+}
+
+.action-details {
+    font-style: italic;
+    font-weight: 400;
+}
